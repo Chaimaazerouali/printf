@@ -28,3 +28,4 @@ int display_hex(va_list args, param_t *params)
 	}
 	params->isUnsigned = 1;
 	return (count += print_num_str(str, params));
+}
