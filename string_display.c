@@ -39,7 +39,7 @@ int display_string(va_list args, param_t *params)
 		else
 			sum += custom_puts(str);
 	}
-	return (custom_putchar('%'));
+	return (sum);
 }
 /**
  * display_percent - prints string

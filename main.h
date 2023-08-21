@@ -17,23 +17,23 @@
 /* Structure for parameter management */
 typedef struct parameter
 {
-    unsigned int isUnsigned: 1;
-    unsigned int plus: 1;
-    unsigned int space: 1;
-    unsigned int hashtag: 1;
-    unsigned int zero: 1;
-    unsigned int minus: 1;
-    unsigned int widthVal;
-    unsigned int precisionVal;
-    unsigned int hMod: 1;
-    unsigned int lMod: 1;
+unsigned int isUnSigned: 1;
+unsigned int plus: 1;
+unsigned int space: 1;
+unsigned int hashtag: 1;
+unsigned int zero: 1;
+unsigned int minus: 1;
+unsigned int widthVal;
+unsigned int precisionVal;
+unsigned int hMod: 1;
+unsigned int lMod: 1;
 } param_t;
 
 /* Structure for specifier management */
 typedef struct spec
 {
-    char *specStr;
-    int (*funcPtr)(va_list, param_t *);
+char *specStr;
+int (*funcPtr)(va_list, param_t *);
 } spec_t;
 
 /* Functions in _put.c */

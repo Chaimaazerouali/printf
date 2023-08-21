@@ -14,7 +14,7 @@ int display_binary(va_list args, param_t *params)
 
 	if (params->hashtag && num)
 		*--str = '0';
-	params->isUnsigned = 1;
+	params->isUnSigned = 1;
 	return (count += print_num_str(str, params));
 }
 
@@ -42,6 +42,6 @@ int display_octal(va_list args, param_t *params)
 
 	if (params->hashtag && val)
 		*--str = '0';
-	params->isUnsigned = 1;
+	params->isUnSigned = 1;
 	return (count += print_num_str(str, params));
 }

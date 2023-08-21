@@ -25,7 +25,7 @@ int display_HEX(va_list args, param_t *params)
 		*--str = 'X';
 		*--str = '0';
 	}
-	params->isUnsigned = 1;
+	params->isUnSigned = 1;
 	return (count += print_num_str(str, params));
 }
 

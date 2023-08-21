@@ -13,15 +13,15 @@ int print_num_lshift(char *str, param_t *params)
 
 	if (params->zero && !params->minus)
 		pad_char = '0';
-	neg = neg2 = (!params->isUnsigned && *str == '-');
+	neg = neg2 = (!params->isUnSigned && *str == '-');
 	if (neg && i < params->widthVal && pad_char == '0' && !params->minus)
 		str++;
 	else
 		neg = 0;
 
-	if (params->plus && !neg2 && !params->isUnsigned)
+	if (params->plus && !neg2 && !params->isUnSigned)
 		n += custom_putchar('+'), i++;
-	else if (params->space && !neg2 && !params->isUnsigned)
+	else if (params->space && !neg2 && !params->isUnSigned)
 		n += custom_putchar(' '), i++;
 	n += custom_puts(str);
 	while (i++ < params->widthVal)

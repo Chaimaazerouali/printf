@@ -20,12 +20,12 @@ int display_hex(va_list args, param_t *params)
 	else
 		val = (unsigned int)va_arg(args, unsigned int);
 
-	str = num_convert(val, 16, UNSIGNED_CONV  | TO_LOWERCASE , params);
+	str = num_convert(val, 16, UNSIGNED_CONV  | TO_LOWERCASE, params);
 	if (params->hashtag && val)
 	{
 		*--str = 'x';
 		*--str = '0';
 	}
-	params->isUnsigned = 1;
+	params->isUnSigned = 1;
 	return (count += print_num_str(str, params));
 }

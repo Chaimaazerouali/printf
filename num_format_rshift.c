@@ -13,7 +13,7 @@ int print_num_rshift(char *str, param_t *params)
 
 	if (params->zero && !params->minus)
 		pad_char = '0';
-	neg = neg2 = (!params->isUnsigned && *str == '-');
+	neg = neg2 = (!params->isUnSigned && *str == '-');
 	if (neg && i < params->widthVal && pad_char == '0' && !params->minus)
 		str++;
 	else
@@ -23,19 +23,19 @@ int print_num_rshift(char *str, param_t *params)
 		i++;
 	if (neg && pad_char == '0')
 		n += custom_putchar('-');
-	if (params->plus && !neg2 && pad_char == '0' && !params->isUnsigned)
+	if (params->plus && !neg2 && pad_char == '0' && !params->isUnSigned)
 		n += custom_putchar('+');
 	else if (!params->plus && params->space && !neg2 &&
-		!params->isUnsigned && params->zero)
+		!params->isUnSigned && params->zero)
 		n += custom_putchar(' ');
 	while (i++ < params->widthVal)
 		n += custom_putchar(pad_char);
 	if (neg && pad_char == ' ')
 		n += custom_putchar('-');
-	if (params->plus && !neg2 && pad_char == ' ' && !params->isUnsigned)
+	if (params->plus && !neg2 && pad_char == ' ' && !params->isUnSigned)
 		n += custom_putchar('+');
 	else if (!params->plus && params->space && !neg2 &&
-		!params->isUnsigned && !params->zero)
+		!params->isUnSigned && !params->zero)
 		n +=  custom_putchar(' ');
 	n += custom_puts(str);
 	return (n);

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * convert_num - Convert a number to its string representation.
+ * num_convert - Convert a number to its string representation.
  * @num: The number to convert.
  * @base: The base to use for conversion.
  * @flags: Conversion flags.
@@ -10,8 +10,8 @@
  * Return: Pointer to the converted string.
  */
 char *num_convert(long int num, int base, int flags, param_t *params)
-{	
-	static char *digitsArray;
+{
+static char *digitsArray;
 	static char buffer[50];
 	char sign = 0;
 	char *ptr;

@@ -9,7 +9,7 @@
 int print_num_str(char *str, param_t *params)
 {
 	unsigned int i = str_length(str);
-	int neg = (!params->isUnsigned && *str == '-');
+	int neg = (!params->isUnSigned && *str == '-');
 
 	if (!params->precisionVal && *str == '0' && !str[1])
 		str = "";

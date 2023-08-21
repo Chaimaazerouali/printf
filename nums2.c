@@ -18,7 +18,7 @@ int display_unsigned(va_list args, param_t *params)
 	else
 		val = (unsigned int)va_arg(args, unsigned int);
 
-	params->isUnsigned = 1;
+	params->isUnSigned = 1;
 	return (print_num_str(num_convert(val, 10, UNSIGNED_CONV, params), params));
 }
 

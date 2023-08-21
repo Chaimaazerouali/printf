@@ -13,7 +13,7 @@ int fetch_modifier(char *s, param_t *params)
 	switch (*s)
 	{
 	case 'h':
-		i = params-> hMod = 1;
+		i = params->hMod = 1;
 		break;
 	case 'l':
 		i = params->lMod = 1;
