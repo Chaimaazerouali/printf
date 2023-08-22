@@ -1,0 +1,36 @@
+#include "main.h"
+/**
+ * display_float - prints a float number
+ * @ap: argument pointer
+ * @params: the parameters struct
+ *
+ * Return: bytes printed
+ */
+int display_float(va_list ap, param_t *params)
+{
+float f = va_arg(ap, double);
+long int part_int;
+long int part_dec;
+char *int_str, *dec_str;
+int count = 0;
+
+if (f < 0)
+{
+custom_putchar('-');
+count++;
+f = -f;
+}
+
+part_int = (long int)f;
+
+part_dec = (long int)((f - part_int)*1000000);
+
+int_str = num_convert(part_int, 10, UNSIGNED_CONV, params);
+dec_str = num_convert(part_dec, 10, UNSIGNED_CONV, params);
+
+count += custom_puts(int_str);
+count += custom_putchar('.');
+count += custom_puts(dec_str);
+
+return (count);
+}

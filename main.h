@@ -76,6 +76,7 @@ int str_length(char *s);
 int print_num_str(char *str, param_t *params);
 int print_num_rshift(char *str, param_t *params);
 int print_num_lshift(char *str, param_t *params);
+int display_float(va_list ap, param_t *params);
 
 /* Functions in params.c */
 void set_params(param_t *params, va_list ap);

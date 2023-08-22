@@ -11,6 +11,7 @@ int total = 0;
 va_list args;
 char *current, *begin;
 param_t params = INIT_PARAMS;
+
 va_start(args, format);
 if (!format || (format[0] == '%' && !format[1]))
 return (-1);

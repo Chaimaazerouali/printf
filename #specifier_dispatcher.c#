@@ -22,7 +22,6 @@ spec_t specifiers[] = {
 {"S", display_S},
 {"r", reverse_print},
 {"R", rot13_print},
-{"f", display_float},
 {NULL, NULL}
 };
 int i = 0;
