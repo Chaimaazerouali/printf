@@ -16,7 +16,7 @@ static char *digitsArray;
 	char sign = 0;
 	char *ptr;
 	unsigned long n = num;
-	(void)params;
+	void(params);
 	if (!(flags & UNSIGNED_CONV) && num < 0)
 	{
 		n = -num;
