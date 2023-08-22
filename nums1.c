@@ -18,11 +18,12 @@ static char *digitsArray;
 	unsigned long n = num;
 
 	(void)params;
+
 if (!(flags & UNSIGNED_CONV) && num < 0)
-	{
-		n = -num;
-		sign = '-';
-	}
+{
+n = -num;
+sign = '-';
+}
 	digitsArray = flags & TO_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
